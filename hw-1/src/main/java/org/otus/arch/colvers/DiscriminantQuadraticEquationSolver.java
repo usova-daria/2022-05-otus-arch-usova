@@ -7,11 +7,18 @@ public class DiscriminantQuadraticEquationSolver implements EquationSolver<Quadr
 
     @Override
     public EquationSolution solve(QuadraticEquation equation) {
-        double discriminant = equation.getA() * ( equation.getA() - 4 * equation.getC());
+        double discriminant = equation.getB() * equation.getB() - 4 * equation.getA() * equation.getC();
+        double[] solutions = null;
+
         if (DoubleUtils.compare(discriminant, 0) == -1) {
-            return new EquationSolution(new double[0]);
+            solutions = new double[0];
+        } else if (DoubleUtils.compare(discriminant, 0) == 1) {
+            double discriminantSqrt = Math.sqrt( discriminant );
+            solutions = new double[]{ (- equation.getB() - discriminantSqrt) / 2 / equation.getA(),
+                                      (- equation.getB() + discriminantSqrt) / 2 / equation.getA()};
         }
-        return new EquationSolution(new double[]{ 1, 2 });
+
+        return new EquationSolution(solutions);
     }
 
 }
