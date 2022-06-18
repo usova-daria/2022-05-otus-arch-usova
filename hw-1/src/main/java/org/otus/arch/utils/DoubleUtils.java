@@ -9,10 +9,11 @@ public class DoubleUtils {
     }
 
     public static int compare(double a, double b) {
-        if (Math.abs( a - b ) < EPSILON) {
+        double delta = a - b;
+        if (Math.abs( delta ) < EPSILON) {
             return 0;
         } else {
-            return Double.compare(a, b);
+            return delta > EPSILON ? 1 : -1;
         }
     }
 
