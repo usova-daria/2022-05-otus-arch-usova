@@ -1,4 +1,4 @@
-package org.otus.arch.colvers;
+package org.otus.arch.solvers;
 
 import org.otus.arch.equation.Equation;
 

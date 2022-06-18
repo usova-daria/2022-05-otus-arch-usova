@@ -1,6 +1,6 @@
-import org.otus.arch.colvers.EquationSolution;
-import org.otus.arch.colvers.EquationSolver;
-import org.otus.arch.colvers.DiscriminantQuadraticEquationSolver;
+import org.otus.arch.solvers.EquationSolution;
+import org.otus.arch.solvers.EquationSolver;
+import org.otus.arch.solvers.DiscriminantQuadraticEquationSolver;
 import org.otus.arch.equation.QuadraticEquation;
 import org.otus.arch.utils.DoubleUtils;
 

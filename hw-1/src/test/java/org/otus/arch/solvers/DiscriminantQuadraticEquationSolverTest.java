@@ -1,4 +1,4 @@
-package org.otus.arch.colvers;
+package org.otus.arch.solvers;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
