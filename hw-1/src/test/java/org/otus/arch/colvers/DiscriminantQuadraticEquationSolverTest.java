@@ -29,6 +29,16 @@ class DiscriminantQuadraticEquationSolverTest {
         testSolution(1, solution.getSolutions()[1]);
     }
 
+    @Test
+    @DisplayName("Equation with one root")
+    void solveEquationWithOneRoot() {
+        QuadraticEquation equation = QuadraticEquation.from(1, 2, 1);
+        EquationSolution solution = solver.solve(equation);
+
+        assertEquals( 1, solution.getSolutionsCount() );
+        testSolution(-1, solution.getSolutions()[0]);
+    }
+
     private static void testSolution(double expected, double actual) {
         assertTrue(DoubleUtils.areEqual(expected, actual), expected + " expected but found " + actual);
     }
