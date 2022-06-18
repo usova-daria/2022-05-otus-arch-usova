@@ -3,7 +3,7 @@ package org.otus.arch.colvers;
 import org.otus.arch.equation.QuadraticEquation;
 import org.otus.arch.utils.DoubleUtils;
 
-public class QuadraticEquationSolver implements EquationSolver<QuadraticEquation> {
+public class DiscriminantQuadraticEquationSolver implements EquationSolver<QuadraticEquation> {
 
     @Override
     public EquationSolution solve(QuadraticEquation equation) {
